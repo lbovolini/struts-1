@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//ApacheSoftware Foundation//DTD Tiles Configuration 1.3//EN"
+        "http://jakarta.apache.org/struts/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+    <!-- Layout -->
+    <definition name="layout" path="/pages/base/layout.jsp">
+        <put name="title" value="Title"/>
+        <put name="header" value="/pages/base/header.jsp"/>
+        <put name="menu" value="/pages/base/menu.jsp"/>
+        <put name="body" value="/pages/home.jsp"/>
+    </definition>
+    <!-- Home -->
+    <definition name="home" extends="layout">
+        <put name="title" value="Home"/>
+    </definition>
+    <!-- Friend List -->
+    <definition name="friends" extends="layout">
+        <put name="title" value="My Friends"/>
+        <put name="body" value="/pages/friends.jsp"/>
+    </definition>
+    <!-- Messages -->
+    <definition name="messages" extends="layout">
+        <put name="title" value="My Messages"/>
+        <put name="body" value="/pages/messages.jsp"/>
+    </definition>
+</tiles-definitions>
